@@ -9,7 +9,7 @@
         
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                Demo <i class="fas fa-caret-down"></i>
+                {{ Auth::guard('admin')->user()->name ?? 'Demo' }} <i class="fas fa-caret-down"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#changePasswordModal">
