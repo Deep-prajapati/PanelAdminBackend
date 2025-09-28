@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CasinoController;
 use App\Http\Controllers\Admin\SportController;
+use App\Http\Controllers\Admin\ReportController;
 
 Route::prefix('admin')
      ->name('admin.')
@@ -35,6 +36,11 @@ Route::prefix('admin')
 
             // Casino route
             Route::get('casino/details', [CasinoController::class, 'details'])->name('casino.details');
+            Route::get('casino/inplay-casino', [CasinoController::class, 'inplay'])->name('casino.inplay');
+            Route::get('casino/completed-casino', [CasinoController::class, 'completed'])->name('casino.completed');
 
+            // Reports Route
+            Route::get('reports/login-report', [ReportController::class, 'loginReport'])->name('reports.login_report');
+            Route::get('reports/security-code-report', [ReportController::class, 'securityCodeReport'])->name('reports.security_code_report');
          });
      });

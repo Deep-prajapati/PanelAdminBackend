@@ -10,4 +10,17 @@ class CasinoController extends Controller
     {
         return view('admin.casino.details');
     }
+
+    public function inplay()
+    {
+        $liveGames = []; 
+
+        return view('admin.casino.inplay', compact('liveGames'));
+    }
+    public function completed()
+    {
+        $completedGames = []; 
+        return view('admin.casino.completed', compact('completedGames'));
+    }
+    
 }
