@@ -198,9 +198,8 @@
                 </li>
 
                 {{-- Comm. Report Link --}}
-                <li class="nav-item">
-                    {{-- NOTE: Add your route name here (e.g., admin.commission.report) --}}
-                    <a href="#" class="nav-link @if(request()->routeIs('admin.commission.report')) active @endif">
+            <li class="nav-item">
+                    <a href="{{ route('admin.commission.report') }}" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i> <p>Comm. Report</p>
                     </a>
                 </li>
@@ -232,12 +231,11 @@
                 </li>
                 
                 {{-- JEM29 Setting Link --}}
-                <li class="nav-item">
-                    {{-- NOTE: Add your route name here (e.g., admin.settings) --}}
-                    <a href="#" class="nav-link @if(request()->routeIs('admin.settings')) active @endif">
-                        <i class="nav-icon fas fa-cog"></i> <p>JEM29 Setting</p>
-                    </a>
-                </li>
+                 <li class="nav-item">
+        <a href="{{ route('admin.jem29.settings') }}" class="nav-link">
+            <i class="nav-icon fas fa-cog"></i> <p>JEM29 Setting</p>
+        </a>
+    </li>
                 
             </ul>
         </nav>
