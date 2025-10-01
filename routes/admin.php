@@ -15,11 +15,12 @@ Route::prefix('admin')
             Route::post('logout', [AuthController::class, 'logout'])->name('logout');
         });
 
-         Route::middleware('admin.auth')->group(function () {
+        Route::middleware('admin.auth')->group(function () {
             Route::get('dashboard', function () {
-                 return view('admin.dashboard');
-             })->name('dashboard');
-             # Agent Routes
+                return view('admin.dashboard');
+            })->name('dashboard');
+            
+            # Agent Routes
             Route::get('agent/details', [UserController::class, 'agentList'])->name('agent.list');
             Route::get('agent/create', [UserController::class, 'agentCreate'])->name('agent.create');
             Route::post('agent/store', [UserController::class, 'agentStore'])->name('agent.store');
